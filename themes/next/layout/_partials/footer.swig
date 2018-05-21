@@ -5,8 +5,6 @@
   <span class="with-love">
     <i class="fa fa-{{ theme.footer.icon }}"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
-
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
@@ -19,12 +17,14 @@
     #}{{ totalcount(site, '0,0.0a') }}{#
   #}</span>
   {% endif %}
+  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
+ 
 </div>
 
 {% if theme.footer.powered %}
-  <!-- <div class="powered-by">{#
-  #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>') }}{#
-#}</div> -->
+  <div class="powered-by">{#
+  #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://zhouxin1233.github.io">小新</a>') }}{#
+#}</div> 
 {% endif %}
 
 {% if theme.footer.powered and theme.footer.theme.enable %}
@@ -34,9 +34,7 @@
 {% if theme.footer.theme.enable %}
   <!-- <div class="theme-info">{#
   #}{{ __('footer.theme') }} &mdash; {#
-  #}<a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">{#
-    #}NexT.{{ theme.scheme }}{#
-  #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
+  #}{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div> -->
 {% endif %}
 
